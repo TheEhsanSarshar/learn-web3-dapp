@@ -6,16 +6,7 @@
     "dev": "next dev",
     "dev:figment": "APP_ENV=development next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "solana:build:program": "cargo build-bpf --manifest-path=contracts/solana/program/Cargo.toml --bpf-out-dir=dist/solana/program",
-    "near:build:contract": "node contracts/near/compile.js",
-    "near:build:contract:debug": "node contracts/near/compile.js --debug",
-    "near:test": "cd contracts/near && cargo test -- --nocapture && cd -",
-    "near:test:verbose": "yarn near:build:contract:debug && cd contracts/near && cargo test -v -- --nocapture && cd -",
-    "truffle-polygon": "yarn global add truffle && cd ./contracts/polygon/SimpleStorage && yarn && truffle obtain --solc 0.8.0",
-    "prepare": "husky install",
-    "test": "[ -f dist/solana/program/helloworld-keypair.json ] && jest || echo 'Run: yarn solana:build:program'"
+    "start": "next start"
   },
   "dependencies": {
     "@3id/connect": "^0.2.5",
